@@ -279,6 +279,23 @@
         });
       }
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    // Selecciona todos los enlaces de la navbar
+    var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    var navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    // Añade un evento click a cada enlace
+    navLinks.forEach(function(navLink) {
+      navLink.addEventListener('click', function() {
+        // Verifica si el menú está expandido
+        if (navbarCollapse.classList.contains('show')) {
+          // Cierra el menú colapsando
+          new bootstrap.Collapse(navbarCollapse).toggle();
+        }
+      });
+    });
+  });
   </script>
 </body>
 </html>
