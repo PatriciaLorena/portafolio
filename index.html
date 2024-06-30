@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PatyFer</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- estilos animador para la pagina de bienvenida-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- Fonts estilos de tipos de letras -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
   <style>
-    html{
+    *{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;  
+}
+    html {
       scroll-padding-top: 70px;
     }
+
     .navbar {
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 1000;
+      background-color: #010106;
     }
+
+    .fondo2{
+    background-image: url('https://img.freepik.com/vector-premium/fondo-vector-verde-abstracto-estrellas-brillo-tarjeta-navidad-patron-invierno-o-ano-nuevo_554025-974.jpg?w=740');
+    background-attachment: fixed;
+    background-size: cover; /* Ajusta la imagen para cubrir todo el div */
+    background-repeat: no-repeat;
+    /*filter: blur(5px);*/
+}
 
     .navbar-brand {
       font-size: 1.5rem;
       font-weight: bold;
-      color: #fff;
+      color: #05820A;
     }
 
     .navbar-toggler {
@@ -31,17 +51,15 @@
       font-size: 1rem;
     }
 
-    .fondo {
-      background-color: #8eeab7;
-      padding: 20px 0;
+    .mi {
+      color: #010106;
+      margin-top: 80px;
     }
 
-    .mi {
-      color: #271bd4;
-      margin-top: 70px;
-    }
-    .de{
-      color: #271bd4;
+    .de {
+      color: #010106;
+      font-size: 40px;
+      margin-bottom: 20px;
     }
 
     .en {
@@ -53,127 +71,166 @@
       height: 100%;
     }
 
-    .desarr{
+    .desarr {
       margin-top: 25px;
     }
-    .image{
+
+    .image {
       flex-direction: column;
       text-align: right;
       justify-content: right;
       padding-right: 100px;
+      
     }
+
+    .rounded-circle {
+    border-radius: 50%; /* Mantiene la forma circular */
+    box-shadow: 0 0 30px 15px rgba(0, 0, 0, 0.5); /* Añade la sombra difuminada */
+    transition: box-shadow 0.9s ease-in-out; /* Transición suave al aplicar la sombra */
+}
+
+.rounded-circle:hover {
+    box-shadow: 0 0 40px 17px rgba(0, 0, 0, 0.7); /* Sombra más grande y oscura al pasar el ratón */
+}
 
     .full-width {
       text-align: justify;
-      font-size: 18px;
+      font-size: 21px;
+      color: #010106;
+      font-weight: 700;
     }
 
     .navbar-nav .nav-item {
       margin-right: 10px;
     }
 
-    
-    .enlaces{
+    .enlaces {
       font-size: 25px;
       font-weight: 700;
       text-align: center;
     }
-    .menu{
-      font-size: 18px;
+
+    .menu a{
+      text-decoration: none;
+      font-size: 19px;
       font-weight: 500;
       color: #fff;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      text-transform: uppercase;
+      transition: all 0.4s;
     }
-    .menu:hover{
-      color: #271bd4;
-    }	
-    a{
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: 500;
+
+    .menu a:hover {
+      color: #05820A;
     }
-    footer{
+
+    footer {
       background-color: #271bd4;
       color: #fff;
       text-align: center;
       padding: 20px 0;
     }
-    .margen{
+
+    .margen {
       padding-left: 170px;
       padding-right: 170px;
       margin-top: 10px;
       margin-bottom: 20px;
       height: 480px;
+      
     }
+    
     .proyectos {
-      display: none; /* Inicialmente oculto */
       text-align: center;
       margin-top: 50px;
-      font-size: 30px;
-      color: #000;
+      font-size: 50px;
+      font-weight: 500;
+      color: #010106;
     }
 
     @media (max-width: 991px) {
       .navbar-nav {
         margin-top: 15px;
       }
+
       .enlace {
         padding-left: 20px;
       }
-      .image{
+
+      .image {
         padding-right: 20px;
       }
-      .mi{
-        margin-top: 50px;
+
+      .mi {
+        margin-top: 60px;
+        font-size: 40px;
+        font-weight: 500;
       }
-      .desarr{
+
+      .desarr {
         margin-top: 10px;
       }
-      .margen{
+
+      .margen {
         padding-left: 0px;
         padding-right: 0px;
       }
     }
+
+    .enlace a{
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 700;
+      color: #010106;
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+    .enlace a:hover {
+      color: #efe3e3;
+    }
+
   </style>
 </head>
+
 <body>
-  <nav class="navbar navbar-expand-lg navbar-primary bg-primary ">
+  <nav class="navbar navbar-expand-lg navbar-primary">
     <div class="container-fluid px-5 pe-5 ">
-      <a class="navbar-brand" href="#">Mi portafolio</a>
+      <a class="navbar-brand">Mi portafolio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto menu">
-          
+        <ul id="nav" class="navbar-nav ms-auto menu">
           <li class="nav-item">
-            <a class="nav-link menu" href="#acerca">Acerca de mi</a>
+            <a class="nav-link" href="#acerca">Acerca de mi</a>
           </li>
           <li class="nav-item">
-            <a id="proyectos-link" class="nav-link menu" href="#misproyectos">Proyectos</a>
+            <a class="nav-link"  href="#misproyectos">Proyectos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link menu" href="#">Contacto</a>
+            <a class="nav-link" href="#">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link menu" href="#">Deportes</a>
+            <a class="nav-link" href="#">Deportes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link menu" href="#">Pasatiempos</a>
+            <a class="nav-link" href="#">Pasatiempos</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="container-fluid fondo" id="acerca">
+  <div class="container-fluid fondo fondo2" id="acerca">
     <div class="row justify-content-center align-items-center">
-      <h1 class="mi justify-content-center text-center">Patricia Fernández</h1>
-      <div class="col-6 image">  
+      <h1 class="mi justify-content-center text-center title animate__animated animate__flipInY"><b> Hola soy Patricia Fernández!!!</b></h1>
+      <div class="col-6 image">
         <img src="img/paty.jpg" width="200" height="200" alt="Foto de Patricia" class="rounded-circle mt-3">
       </div>
       <div class="col-6 en mt-3 enlace">
-        <div><a href="mailto:patricia.fernandez54@unae.edu.py"><img src="img/gmail.png" width="20" height="20"
+        <div ><a href="mailto:patricia.fernandez54@unae.edu.py"><img src="img/gmail.png" width="20" height="20"
               alt="icono de gmail"> My Gmail</a></div>
         <div><a href="https://www.linkedin.com/in/patricia-fernandez-54a98310a/"><img src="img/ln.png" width="20"
               height="20" alt="icono de linkedin"> My Linkedin</a></div>
@@ -183,18 +240,13 @@
     </div>
     <div class="row justify-content-center align-items-center desarr">
       <div class="col-12">
-        <h2 class="text-center de">Desarrolladora de Software</h2>
+        <h2 class="text-center de title animate__animated animate__fadeInDown"><b> Desarrolladora de Software</b> </h2>
         <p class="full-width mx-5 me-5">
           Soy Licenciada en Análisis de Sistemas Informáticos y Desarrolladora full stack MERN, con experiencia en PHP,
           Laravel, Java, MySQL, JavaScript, HTML, CSS, Bootstrap, MongoDB, Express.js, React, Node.js, Android, Git,
           Servicios web y Postman. Cuento con capacidad de empatía, apertura al aprendizaje y organización del tiempo,
           demostradas en mi experiencia como docente. Mi pasión por el aprendizaje y la enseñanza impulsa mi
-          crecimiento continuo en el desarrollo de aplicaciones web y móviles. Durante el bootcamp de manera individual
-          desarrollé un sistema para gestión de préstamos, utilizando React, Node.js, Express.js, Bootstrap, REST, JSON.
-          De manera grupal continuamos con la misma aplicación de gestión de préstamos implementando más funcionalidades
-          donde aprendí a realizar trabajos colaborativos utilizando GitHub y Trello. Actualmente me encuentro interesada
-          en continuar desarrollando mi carrera en el área de tecnología, puntualmente buscando oportunidades para
-          expandir mis habilidades técnicas y compartir conocimientos con otros.
+          crecimiento continuo en el desarrollo de aplicaciones web y móviles. 
         </p>
       </div>
     </div>
@@ -202,29 +254,32 @@
 
   <!-- Carousel -->
   <div id="misproyectos">
-    <h2 class="proyectos">Proyectos</h2>
+    <h2 class="proyectos"><b>Proyectos</b></h2>
     <div id="carouselExampleDark" class="carousel carousel-dark slide">
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="10000">
-          <img src="img/juegoNinja.png" class="d-block w-100 margen" alt="juego del ninja">
-          <div class="carousel-caption d-none d-md-block">
-            <h2>JUEGO DEL NINJA</h2>
-            <p>creado con html, css y JavaScript</p>
-            <a href="https://patricialorena.github.io/CalculadoraBasal/" class=" btn btn-primary" target="_blank">Ir al repositorio</a>
-          </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
+        <div class="carousel-item active" data-bs-interval="2000">
           <img src="img/calculadora.png" class="d-block w-100 margen" alt="Calculadora basal">
           <div class="carousel-caption d-none d-md-block">
             <h5>Second slide label</h5>
             <p>Some representative placeholder content for the second slide.</p>
-            <a href="https://patricialorena.github.io/CalculadoraBasal/" class=" btn btn-primary" target="_blank">Ir a la calculadora</a>
+            <a href="https://patricialorena.github.io/CalculadoraBasal/" class=" btn btn-primary" target="_blank">Ir a
+              la calculadora</a>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
+          <img src="img/juegoNinja.png" class="d-block w-100 margen" alt="juego del ninja">
+          <div class="carousel-caption d-none d-md-block">
+            <h2>JUEGO DEL NINJA</h2>
+            <p>creado con html, css y JavaScript</p>
+            <a href="https://patricialorena.github.io/CalculadoraBasal/" class=" btn btn-primary" target="_blank">Ir al
+              repositorio</a>
           </div>
         </div>
         <div class="carousel-item" data-bs-interval="2000">
@@ -232,7 +287,8 @@
           <div class="carousel-caption d-none d-md-block">
             <h5>Second slide label</h5>
             <p>Some representative placeholder content for the second slide.</p>
-            <a href="https://patricialorena.github.io/CalculadoraBasal/" class=" btn btn-primary" target="_blank">Ir al repositorio</a>
+            <a href="https://patricialorena.github.io/CalculadoraBasal/" class=" btn btn-primary" target="_blank">Ir al
+              repositorio</a>
           </div>
         </div>
         <div class="carousel-item" data-bs-interval="2000">
@@ -240,7 +296,8 @@
           <div class="carousel-caption d-none d-md-block">
             <h5>Second slide label</h5>
             <p>Some representative placeholder content for the second slide.</p>
-            <a href="https://patricialorena.github.io/CalculadoraBasal/" class=" btn btn-primary" target="_blank">Ir al repositorio</a>
+            <a href="https://patricialorena.github.io/CalculadoraBasal/" class=" btn btn-primary" target="_blank">Ir al
+              repositorio</a>
           </div>
         </div>
       </div>
@@ -254,17 +311,21 @@
       </button>
     </div>
   </div>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ratione vitae possimus neque ea consectetur asperiores voluptatibus quaerat aspernatur illo! Incidunt totam suscipit doloribus dolorum mollitia aliquam esse ad a.</p>
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ut porro laudantium quo voluptas unde eligendi nam mollitia quam. Ducimus odit enim recusandae suscipit nesciunt nisi itaque doloremque mollitia. Maiores, rerum laudantium. Atque neque expedita nihil, ut totam est hic.</p>
-  
-<footer>
-  <p>© 2023 Copyright: patricia.fernandez54@unae.edu.py</p>
-</footer>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ratione vitae possimus neque ea consectetur
+    asperiores voluptatibus quaerat aspernatur illo! Incidunt totam suscipit doloribus dolorum mollitia aliquam esse ad
+    a.</p>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ut porro laudantium quo voluptas unde eligendi nam
+    mollitia quam. Ducimus odit enim recusandae suscipit nesciunt nisi itaque doloremque mollitia. Maiores, rerum
+    laudantium. Atque neque expedita nihil, ut totam est hic.</p>
+
+  <footer>
+    <p>© 2023 Copyright: patricia.fernandez54@unae.edu.py</p>
+  </footer>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       var proyectosLink = document.getElementById('proyectos-link');
       if (proyectosLink) {
-        proyectosLink.addEventListener('click', function(event) {
+        proyectosLink.addEventListener('click', function (event) {
           event.preventDefault();
           var proyectosSection = document.getElementById('misproyectos');
           if (proyectosSection) {
@@ -272,30 +333,33 @@
             if (tituloProyectos) {
               tituloProyectos.style.display = 'block';
             }
-            proyectosSection.scrollIntoView({ 
-              behavior: 'smooth' 
+            proyectosSection.scrollIntoView({
+              behavior: 'smooth'
             });
           }
         });
       }
     });
 
-    document.addEventListener('DOMContentLoaded', function() {
-    // Selecciona todos los enlaces de la navbar
-    var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    var navbarCollapse = document.querySelector('.navbar-collapse');
-    
-    // Añade un evento click a cada enlace
-    navLinks.forEach(function(navLink) {
-      navLink.addEventListener('click', function() {
-        // Verifica si el menú está expandido
-        if (navbarCollapse.classList.contains('show')) {
-          // Cierra el menú colapsando
-          new bootstrap.Collapse(navbarCollapse).toggle();
-        }
+    document.addEventListener('DOMContentLoaded', function () {
+      // Selecciona todos los enlaces de la navbar
+      var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+      var navbarCollapse = document.querySelector('.navbar-collapse');
+
+      // Añade un evento click a cada enlace
+      navLinks.forEach(function (navLink) {
+        navLink.addEventListener('click', function () {
+          // Verifica si el menú está expandido
+          if (navbarCollapse.classList.contains('show')) {
+            // Cierra el menú colapsando
+            new bootstrap.Collapse(navbarCollapse).toggle();
+          }
+        });
       });
     });
-  });
   </script>
+
+<script src="javaScript.js"></script>
 </body>
+
 </html>
