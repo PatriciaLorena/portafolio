@@ -1,0 +1,107 @@
+.flex-container{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+	background: #444;
+	margin: 30px auto;
+	border: 14px solid #000;
+	outline: 6px solid #05820A;
+	max-width: 100%;
+}
+
+#miscontactos{
+	padding-left: 50px;
+	padding-right: 50px;
+	background-color: #05820A;
+	padding-top: 5px;
+	min-height: 90vh;
+	
+}
+.form__section{
+	display: flex;
+	
+}
+
+
+.form{
+	min-width: 300px;
+	flex: 1;
+	text-align: center;
+	padding: 30px;
+	order: 5;
+	
+	
+}
+
+.form__input{
+	width: 100%;
+	padding: 5px;
+	margin: 6px 0;
+	border: none;
+	border-bottom: 3px solid #05820A;
+	background: transparent;
+	color: #fff;
+	display: flex;
+
+}
+
+.form__input:focus{
+	background: linear-gradient(to bottom, transparent, #222);
+	outline: none;
+	border-bottom: 3px solid #af9;
+}
+
+.form__section textarea {
+	min-height: 120px;
+	resize: none;
+}
+
+.form-img{
+	flex: 1;
+	padding: 10px;
+	display: flex;
+	min-width: 200px;
+	max-width: 300px;
+	order: 2;
+}
+
+.img-container{
+	margin: auto;
+	
+}
+
+.img-container div{
+	text-align: center;
+	padding: 40px;
+	border-radius: 50%;
+	background-color: #444;
+}
+.form-img img{
+	width: 90%;
+	margin: auto;
+	
+}
+
+.form input[type="submit"] {
+	background-color: #000;
+	border-bottom: none;
+	padding: 12px;
+	display: block;
+}
+
+.form input[type="submit"]:hover {
+	background-color: #333;
+	border-bottom: none;
+	padding: 12px;
+}
+
+.form input[type="submit"]:focus {
+	background-color: #888;
+}
+
+.form input[type="submit"]:active{
+	background: linear-gradient(to bottom, #333,#000);
+}
+
+

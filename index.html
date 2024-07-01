@@ -11,7 +11,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <!-- Fonts estilos de tipos de letras -->
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-  <style>
+  <link rel="stylesheet" href="formularioFlex.css">
+ <style>
     *{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -126,7 +127,7 @@
     }
 
     footer {
-      background-color: #271bd4;
+      background-color: #010106;
       color: #fff;
       text-align: center;
       padding: 20px 0;
@@ -141,7 +142,7 @@
       
     }
     
-    .proyectos {
+    .proyectos, .contactos {
       text-align: center;
       margin-top: 50px;
       font-size: 50px;
@@ -176,6 +177,10 @@
         padding-left: 0px;
         padding-right: 0px;
       }
+      #miscontactos{
+	      padding-left: 0px;
+	      padding-right: 0px;
+}
     }
 
     .enlace a{
@@ -210,7 +215,7 @@
             <a class="nav-link"  href="#misproyectos">Proyectos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contacto</a>
+            <a class="nav-link" href="#miscontactos">Contacto</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Deportes</a>
@@ -230,9 +235,9 @@
         <img src="img/paty.jpg" width="200" height="200" alt="Foto de Patricia" class="rounded-circle mt-3">
       </div>
       <div class="col-6 en mt-3 enlace">
-        <div ><a href="mailto:patricia.fernandez54@unae.edu.py"><img src="img/gmail.png" width="20" height="20"
+        <div ><a href="mailto:patricia.fernandez54@unae.edu.py" target="_blank"><img src="img/gmail.png" width="20" height="20"
               alt="icono de gmail"> My Gmail</a></div>
-        <div><a href="https://www.linkedin.com/in/patricia-fernandez-54a98310a/"><img src="img/ln.png" width="20"
+        <div><a href="https://www.linkedin.com/in/patricia-fernandez-54a98310a/" target="_blank"><img src="img/ln.png" width="20"
               height="20" alt="icono de linkedin"> My Linkedin</a></div>
         <div><a href="https://github.com/PatriciaLorena"><img src="img/facebook.png" width="20" height="20"
               alt="icono de facebook"> My Github</a></div>
@@ -311,13 +316,34 @@
       </button>
     </div>
   </div>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ratione vitae possimus neque ea consectetur
-    asperiores voluptatibus quaerat aspernatur illo! Incidunt totam suscipit doloribus dolorum mollitia aliquam esse ad
-    a.</p>
-  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, ut porro laudantium quo voluptas unde eligendi nam
-    mollitia quam. Ducimus odit enim recusandae suscipit nesciunt nisi itaque doloremque mollitia. Maiores, rerum
-    laudantium. Atque neque expedita nihil, ut totam est hic.</p>
-
+  <div id="miscontactos">
+    <h2 class="contactos"><b>Contactame</b></h2>
+    <div class="flex-container">
+      <form class="form">
+        <div class="form__section">
+          <input type="text" class="form__input" placeholder="Ingrese su nombre">
+        </div>
+        <div class="form__section">
+          <input type="email" class="form__input" placeholder="Ingrese su email">
+        </div>
+        <div class="form__section">
+          <textarea class="form__input" placeholder="Escriba su mensaje"></textarea>
+        </div>
+        <div class="form__section">
+          <input type="submit" class="form__input">
+        </div>
+    
+      </form>
+      <div class="form-img">
+          <div class="img-container">
+            <div>
+              <img src="img/mail.png">
+            </div>
+            
+          </div>
+      </div>
+    </div>
+  </div>
   <footer>
     <p>© 2023 Copyright: patricia.fernandez54@unae.edu.py</p>
   </footer>
